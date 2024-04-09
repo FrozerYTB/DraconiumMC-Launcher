@@ -1,10 +1,10 @@
 {
-    "name": "Conflictura",
-    "preductname": "Conflictura Launcher",
+    "name": "DraconiumMC",
+    "preductname": "DraconiumMC Launcher",
     "version": "2.3.1",
-    "description": "Conflictura modded server launcher",
+    "description": "Launcher pour le serveur DraconiumMC",
     "main": "src/app.js",
-    "author": "Luuxis/Riptiaz",
+    "author": "FrozerYTB" /*Luuxis/Riptiaz */,
     "settings": "https://launcher.conflictura.site",
     "engines": {
         "node": "16.x.x"
@@ -34,6 +34,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Riptiaz/CentralCorp-Launcher.git"
+        "url": "git+https://github.com/FrozerYTB/DraconiumMC-Launcher.git"
     }
 }
