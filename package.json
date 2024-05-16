@@ -7,9 +7,9 @@
     "author": {
         "name": "FrozerYTB, luuxis, Inc.",
         "email": "frozerytb3@gmail;com, contact@luuxis.fr",
-        "url": "https://github.com/FrozerYTB ,https://github.com/luuxis"
+        "url": "https://github.com/FrozerYTB, https://github.com/luuxis"
     },
-    "url": "http://launcher.draconium-mc.fr",
+    "url": "http://draconium-mc.fr",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
