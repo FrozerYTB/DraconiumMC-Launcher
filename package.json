@@ -2,14 +2,14 @@
     "name": "DraconiumMC-Launcher",
     "preductname": "DraconiumMC Launcher",
     "version": "0.0.1",
-    "description": "Launcher Mincraft pour le serveur Selvania",
+    "description": "Launcher Mincraft pour le serveur DraconiumMC",
     "main": "src/app.js",
     "author": {
         "name": "FrozerYTB, luuxis, Inc.",
-        "email": "frozerytb3@gmail;com, contact@luuxis.fr",
+        "email": "frozerytb3@gmail.com, contact@luuxis.fr",
         "url": "https://github.com/FrozerYTB, https://github.com/luuxis"
     },
-    "url": "http://draconium-mc.fr",
+    "url": "https://draconium-mc.fr",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
