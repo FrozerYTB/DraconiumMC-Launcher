@@ -9,7 +9,7 @@
         "email": "frozerytb3@gmail.com, contact@luuxis.fr",
         "url": "https://github.com/FrozerYTB, https://github.com/luuxis"
     },
-    "url": "https://draconium-mc.fr",
+    "url": "https://draconium-mc.fr/httpdocs/public/DraconiumMC-Launcher",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
