@@ -1,400 +1,220 @@
 /**
  * @author Luuxis
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
  */
-
-'use strict';
-
-import { database, changePanel, addAccount, accountSelect } from '../utils.js';
-const { AZauth } = require('minecraft-java-core');
+const { AZauth, Mojang } = require('minecraft-java-core');
 const { ipcRenderer } = require('electron');
-const pkg = require('../package.json');
 
+import { popup, database, changePanel, accountSelect, addAccount, config, setStatus } from '../utils.js';
 
 class Login {
-    
     static id = "login";
     async init(config) {
-        this.config = config
-        this.database = await new database().init();
-        if (this.config.online) this.getOnline()
-        else this.getOffline()
-    }
+        this.config = config;
+        this.db = new database();
 
-    getOnline() {
-        // console.log(`Initializing microsoft Panel...`)
-        // console.log(`Initializing mojang Panel...`)
-        console.log(`Initializing Az Panel...`)
-        this.loginMicrosoft();
-        this.loginMojang();
-        document.querySelector('.cancel-login').addEventListener("click", () => {
-            document.querySelector(".cancel-login").style.display = "none";
-            changePanel("settings");
+        if (typeof this.config.online == 'boolean') {
+            this.config.online ? this.getMicrosoft() : this.getCrack()
+        } else if (typeof this.config.online == 'string') {
+            if (this.config.online.match(/^(http|https):\/\/[^ "]+$/)) {
+                this.getAZauth();
+            }
+        }
+        
+        document.querySelector('.cancel-home').addEventListener('click', () => {
+            document.querySelector('.cancel-home').style.display = 'none'
+            changePanel('settings')
         })
     }
 
-    getOffline() {
-        console.log(`Initializing microsoft Panel...`)
-        console.log(`Initializing mojang Panel...`)
-        console.log(`Initializing offline Panel...`)
-        this.loginMicrosoft();
-        this.loginOffline();
-        document.querySelector('.cancel-login').addEventListener("click", () => {
-            document.querySelector(".cancel-login").style.display = "none";
-            changePanel("settings");
-        })
-    }
+    async getMicrosoft() {
+        console.log('Initializing Microsoft login...');
+        let popupLogin = new popup();
+        let loginHome = document.querySelector('.login-home');
+        let microsoftBtn = document.querySelector('.connect-home');
+        loginHome.style.display = 'block';
 
-    loginMicrosoft() {
-        let microsoftBtn = document.querySelector('.microsoft')
-        let mojangBtn = document.querySelector('.mojang')
-        let cancelBtn = document.querySelector('.cancel-login')
-       
         microsoftBtn.addEventListener("click", () => {
-            microsoftBtn.disabled = true;
-            mojangBtn.disabled = true;
-            cancelBtn.disabled = true;
-            ipcRenderer.invoke('Microsoft-window', this.config.client_id).then(account_connect => {
-                if (!account_connect) {
-                    microsoftBtn.disabled = false;
-                    mojangBtn.disabled = false;
-                    cancelBtn.disabled = false;
+            popupLogin.openPopup({
+                title: 'Connexion',
+                content: 'Veuillez patienter...',
+                color: 'var(--color)'
+            });
+
+            ipcRenderer.invoke('Microsoft-window', this.config.client_id).then(async account_connect => {
+                if (account_connect == 'cancel' || !account_connect) {
+                    popupLogin.closePopup();
                     return;
+                } else {
+                    await this.saveData(account_connect)
+                    popupLogin.closePopup();
                 }
 
-                let account = {
-                    access_token: account_connect.access_token,
-                    client_token: account_connect.uuid,
-                    uuid: account_connect.uuid,
-                    name: account_connect.name,
-                    refresh_token: account_connect.refresh_token,
-                    user_properties: account_connect.user_properties,
-                    meta: {
-                        type: account_connect.meta.type,
-                        demo: account_connect.meta.demo
-                    },
-                    user_info: {
-                        role: account_connect.user_info.role,
-                        monnaie: account_connect.user_info.money,
-                    },
-                }
-
-                let profile = {
-                    uuid: account_connect.uuid,
-                    skins: account_connect.profile.skins || [],
-                    capes: account_connect.profile.capes || []
-                }
-
-                this.database.add(account, 'accounts')
-                this.database.add(profile, 'profile')
-                this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
-
-                addAccount(account)
-                accountSelect(account.uuid)
-                changePanel("home");
-
-                microsoftBtn.disabled = false;
-                mojangBtn.disabled = false;
-                cancelBtn.disabled = false;
-                cancelBtn.style.display = "none";
             }).catch(err => {
-                console.log(err)
-                microsoftBtn.disabled = false;
-                mojangBtn.disabled = false;
-                cancelBtn.disabled = false;
-
+                popupLogin.openPopup({
+                    title: 'Erreur',
+                    content: err,
+                    options: true
+                });
             });
         })
     }
 
-    async loginMojang() {
-        let mailInput = document.querySelector('.Mail')
-        let passwordInput = document.querySelector('.Password')
-        let cancelMojangBtn = document.querySelector('.cancel-mojang')
-        let infoLogin = document.querySelector('.info-login')
-        let loginBtn = document.querySelector(".login-btn")
-        let mojangBtn = document.querySelector('.mojang')
-        let loginBtn2f = document.querySelector('.login-btn-2f')
-        let a2finput = document.querySelector('.a2f')
-        let infoLogin2f = document.querySelector('.info-login-2f')
-        let cancel2f = document.querySelector('.cancel-2f')
-        
-        let azauth = this.config.azauth
-        let newuserurl = `${azauth}/user/register`
-        this.newuser = document.querySelector(".new-user");
-        this.newuser.innerHTML="Pas de compte ?"
-        this.newuser.setAttribute ("href", newuserurl)
+    async getCrack() {
+        console.log('Initializing offline login...');
+        let popupLogin = new popup();
+        let loginOffline = document.querySelector('.login-offline');
 
-        let passwordreseturl = `${azauth}/user/password/reset`
-        this.passwordreset = document.querySelector(".password-reset");
-        this.passwordreset.innerHTML="Mot de passe oublié ?"
-        this.passwordreset.setAttribute ("href", passwordreseturl)
+        let emailOffline = document.querySelector('.email-offline');
+        let connectOffline = document.querySelector('.connect-offline');
+        loginOffline.style.display = 'block';
 
-        mojangBtn.addEventListener("click", () => {
-            document.querySelector(".login-card").style.display = "none";
-            document.querySelector(".login-card-mojang").style.display = "block";
-            document.querySelector('.a2f-card').style.display = "none";
-        })
-
-        cancelMojangBtn.addEventListener("click", () => {
-            document.querySelector(".login-card").style.display = "block";
-            document.querySelector(".login-card-mojang").style.display = "none";
-            document.querySelector('.a2f-card').style.display = "none";
-        })
-        cancel2f.addEventListener("click", () => {
-            document.querySelector(".login-card").style.display = "block";
-            document.querySelector(".login-card-mojang").style.display = "none";
-            document.querySelector('.a2f-card').style.display = "none";
-            infoLogin.style.display = "none";
-            cancelMojangBtn.disabled = false;
-            mailInput.value = "";
-            loginBtn.disabled = false;
-            mailInput.disabled = false;
-            passwordInput.disabled = false;
-            passwordInput.value = "";
-        })
-
-        loginBtn2f.addEventListener("click", async() => {
-         if (a2finput.value == "") {
-                infoLogin2f.innerHTML = "Entrez votre code a2f"
-                return
-            }
-            let azAuth = new AZauth(azauth);
-
-            await azAuth.login(mailInput.value, passwordInput.value, a2finput.value).then(async account_connect => {
-                console.log(account_connect);
-                if (account_connect.error) {
-                    infoLogin2f.innerHTML = 'Code a2f invalide'
-                    return
-                }
-                let account = {
-                    access_token: account_connect.access_token,
-                    client_token: account_connect.uuid,
-                    uuid: account_connect.uuid,
-                    name: account_connect.name,
-                    user_properties: account_connect.user_properties,
-                    meta: {
-                        type: account_connect.meta.type,
-                        offline: true
-                    },
-                    user_info: {
-                        role: account_connect.user_info.role,
-                        monnaie: account_connect.user_info.money,
-                    },
-                    
-                    
-                }
-
-                this.database.add(account, 'accounts')
-                this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
-
-                addAccount(account)
-                accountSelect(account.uuid)
-                changePanel("home");
-
-                cancelMojangBtn.disabled = false;
-                cancelMojangBtn.click();
-                mailInput.value = "";
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                loginBtn.style.display = "block";
-                infoLogin.innerHTML = "&nbsp;";
-            })
-
-            
-
-        })
-
-
-
-        loginBtn.addEventListener("click", async() => {
-            cancelMojangBtn.disabled = true;
-            loginBtn.disabled = true;
-            mailInput.disabled = true;
-            passwordInput.disabled = true;
-            infoLogin.innerHTML = "Connexion en cours...";
-
-
-            if (mailInput.value == "") {
-                console.log(mailInput.value);
-                infoLogin.innerHTML = "Entrez votre pseudo"
-                cancelMojangBtn.disabled = false;
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                return
+        connectOffline.addEventListener('click', async () => {
+            if (emailOffline.value.length < 3) {
+                popupLogin.openPopup({
+                    title: 'Erreur',
+                    content: 'Votre pseudo doit faire au moins 3 caractères.',
+                    options: true
+                });
+                return;
             }
 
-            if (passwordInput.value == "") {
-                infoLogin.innerHTML = "Entrez votre mot de passe"
-                cancelMojangBtn.disabled = false;
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                return
+            if (emailOffline.value.match(/ /g)) {
+                popupLogin.openPopup({
+                    title: 'Erreur',
+                    content: 'Votre pseudo ne doit pas contenir d\'espaces.',
+                    options: true
+                });
+                return;
             }
-            let azAuth = new AZauth(azauth);
 
-            await azAuth.login(mailInput.value, passwordInput.value).then(async account_connect => {
-                console.log(account_connect);
+            let MojangConnect = await Mojang.login(emailOffline.value);
 
-                if (account_connect.A2F === true) {
-                    document.querySelector('.a2f-card').style.display = "block";
-                    document.querySelector(".login-card-mojang").style.display = "none";
-                    cancelMojangBtn.disabled = false;
-                    return
-
-                }
-               
-                if (account_connect.reason === 'user_banned') {
-                    cancelMojangBtn.disabled = false;
-                    loginBtn.disabled = false;
-                    mailInput.disabled = false;
-                    passwordInput.disabled = false;
-                    infoLogin.innerHTML = 'Votre compte est banni'
-                    return
-                }
-                
-                cancelMojangBtn.addEventListener("click", () => {
-                    document.querySelector(".login-card").style.display = "block";
-                    document.querySelector(".login-card-mojang").style.display = "none";
-                    document.querySelector('.a2f-card').style.display = "none";
-                })
-
-             
-
-                let account = {
-                    access_token: account_connect.access_token,
-                    client_token: account_connect.uuid,
-                    uuid: account_connect.uuid,
-                    name: account_connect.name,
-                    user_properties: account_connect.user_properties,
-                    meta: {
-                        type: account_connect.meta.type,
-                        offline: true
-                    },
-                    user_info: {
-                        role: account_connect.user_info.role,
-                        monnaie: account_connect.user_info.money,
-                    },
-                    
-                    
-                }
-                
-
-                this.database.add(account, 'accounts')
-                this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
-
-
-                addAccount(account)
-                accountSelect(account.uuid)
-                changePanel("home");
-
-                cancelMojangBtn.disabled = false;
-                cancelMojangBtn.click();
-                mailInput.value = "";
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                loginBtn.style.display = "block";
-                infoLogin.innerHTML = "&nbsp;";
-            }).catch(err => {
-                console.log(err);
-                cancelMojangBtn.disabled = false;
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                infoLogin.innerHTML = 'Adresse E-mail ou mot de passe invalide'
-            })
-        })
+            if (MojangConnect.error) {
+                popupLogin.openPopup({
+                    title: 'Erreur',
+                    content: MojangConnect.message,
+                    options: true
+                });
+                return;
+            }
+            await this.saveData(MojangConnect)
+            popupLogin.closePopup();
+        });
     }
 
-    loginOffline() {
-        let mailInput = document.querySelector('.Mail')
-        let passwordInput = document.querySelector('.Password')
-        let cancelMojangBtn = document.querySelector('.cancel-mojang')
-        let infoLogin = document.querySelector('.info-login')
-        let loginBtn = document.querySelector(".login-btn")
-        let mojangBtn = document.querySelector('.mojang')
+    async getAZauth() {
+        console.log('Initializing AZauth login...');
+        let AZauthClient = new AZauth(this.config.online);
+        let PopupLogin = new popup();
+        let loginAZauth = document.querySelector('.login-AZauth');
+        let loginAZauthA2F = document.querySelector('.login-AZauth-A2F');
 
-        mojangBtn.innerHTML = "Offline"
+        let AZauthEmail = document.querySelector('.email-AZauth');
+        let AZauthPassword = document.querySelector('.password-AZauth');
+        let AZauthA2F = document.querySelector('.A2F-AZauth');
+        let connectAZauthA2F = document.querySelector('.connect-AZauth-A2F');
+        let AZauthConnectBTN = document.querySelector('.connect-AZauth');
+        let AZauthCancelA2F = document.querySelector('.cancel-AZauth-A2F');
 
-        mojangBtn.addEventListener("click", () => {
-            document.querySelector(".login-card").style.display = "none";
-            document.querySelector(".login-card-mojang").style.display = "block";
-        })
+        loginAZauth.style.display = 'block';
 
-        cancelMojangBtn.addEventListener("click", () => {
-            document.querySelector(".login-card").style.display = "block";
-            document.querySelector(".login-card-mojang").style.display = "none";
-        })
+        AZauthConnectBTN.addEventListener('click', async () => {
+            PopupLogin.openPopup({
+                title: 'Connexion en cours...',
+                content: 'Veuillez patienter...',
+                color: 'var(--color)'
+            });
 
-        loginBtn.addEventListener("click", () => {
-            cancelMojangBtn.disabled = true;
-            loginBtn.disabled = true;
-            mailInput.disabled = true;
-            passwordInput.disabled = true;
-            infoLogin.innerHTML = "Connexion en cours...";
-
-
-            if (mailInput.value == "") {
-                infoLogin.innerHTML = "Entrez votre adresse email / Nom d'utilisateur"
-                cancelMojangBtn.disabled = false;
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                return
+            if (AZauthEmail.value == '' || AZauthPassword.value == '') {
+                PopupLogin.openPopup({
+                    title: 'Erreur',
+                    content: 'Veuillez remplir tous les champs.',
+                    options: true
+                });
+                return;
             }
 
-            if (mailInput.value.length < 3) {
-                infoLogin.innerHTML = "Votre nom d'utilisateur doit avoir au moins 3 caractères"
-                cancelMojangBtn.disabled = false;
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                return
+            let AZauthConnect = await AZauthClient.login(AZauthEmail.value, AZauthPassword.value);
+
+            if (AZauthConnect.error) {
+                PopupLogin.openPopup({
+                    title: 'Erreur',
+                    content: AZauthConnect.message,
+                    options: true
+                });
+                return;
+            } else if (AZauthConnect.A2F) {
+                loginAZauthA2F.style.display = 'block';
+                loginAZauth.style.display = 'none';
+                PopupLogin.closePopup();
+
+                AZauthCancelA2F.addEventListener('click', () => {
+                    loginAZauthA2F.style.display = 'none';
+                    loginAZauth.style.display = 'block';
+                });
+
+                connectAZauthA2F.addEventListener('click', async () => {
+                    PopupLogin.openPopup({
+                        title: 'Connexion en cours...',
+                        content: 'Veuillez patienter...',
+                        color: 'var(--color)'
+                    });
+
+                    if (AZauthA2F.value == '') {
+                        PopupLogin.openPopup({
+                            title: 'Erreur',
+                            content: 'Veuillez entrer le code A2F.',
+                            options: true
+                        });
+                        return;
+                    }
+
+                    AZauthConnect = await AZauthClient.login(AZauthEmail.value, AZauthPassword.value, AZauthA2F.value);
+
+                    if (AZauthConnect.error) {
+                        PopupLogin.openPopup({
+                            title: 'Erreur',
+                            content: AZauthConnect.message,
+                            options: true
+                        });
+                        return;
+                    }
+
+                    await this.saveData(AZauthConnect)
+                    PopupLogin.closePopup();
+                });
+            } else if (!AZauthConnect.A2F) {
+                await this.saveData(AZauthConnect)
+                PopupLogin.closePopup();
             }
-
-            Mojang.getAuth(mailInput.value, passwordInput.value).then(async account_connect => {
-                let account = {
-                    access_token: account_connect.access_token,
-                    client_token: account_connect.uuid,
-                    uuid: account_connect.uuid,
-                    name: account_connect.name,
-                    user_properties: account_connect.user_properties,
-                    meta: {
-                        type: account_connect.meta.type,
-                        offline: account_connect.meta.offline
-                    },
-                }
-
-                this.database.add(account, 'accounts')
-                this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
-
-                addAccount(account)
-                accountSelect(account.uuid)
-                changePanel("home");
-
-                cancelMojangBtn.disabled = false;
-                cancelMojangBtn.click();
-                mailInput.value = "";
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                loginBtn.style.display = "block";
-                infoLogin.innerHTML = "&nbsp;";
-            }).catch(err => {
-                console.log(err)
-                cancelMojangBtn.disabled = false;
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                infoLogin.innerHTML = 'Adresse E-mail ou mot de passe invalide'
-            })
-        })
+        });
     }
-    
+
+    async saveData(connectionData) {
+        let configClient = await this.db.readData('configClient');
+        let account = await this.db.createData('accounts', connectionData)
+        let instanceSelect = configClient.instance_selct
+        let instancesList = await config.getInstanceList()
+        configClient.account_selected = account.ID;
+
+        for (let instance of instancesList) {
+            if (instance.whitelistActive) {
+                let whitelist = instance.whitelist.find(whitelist => whitelist == account.name)
+                if (whitelist !== account.name) {
+                    if (instance.name == instanceSelect) {
+                        let newInstanceSelect = instancesList.find(i => i.whitelistActive == false)
+                        configClient.instance_selct = newInstanceSelect.name
+                        await setStatus(newInstanceSelect.status)
+                    }
+                }
+            }
+        }
+
+        await this.db.updateData('configClient', configClient);
+        await addAccount(account);
+        await accountSelect(account);
+        changePanel('home');
+    }
 }
-
 export default Login;
