@@ -5,7 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="363a3cd6-5382-4a32-869e-669df5b09470" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppData/Launcher/SharedStorage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Code Cache/js/index-dir/the-real-index" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/Code Cache/js/index-dir/the-real-index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Code Cache/wasm/index-dir/the-real-index" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/Code Cache/wasm/index-dir/the-real-index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/DawnGraphiteCache/data_1" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/DawnGraphiteCache/data_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/DawnWebGPUCache/data_1" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/DawnWebGPUCache/data_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/GPUCache/data_0" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/GPUCache/data_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/GPUCache/data_1" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/GPUCache/data_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/GPUCache/data_2" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/GPUCache/data_2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/GPUCache/data_3" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/GPUCache/data_3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Local Storage/leveldb/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/Local Storage/leveldb/000003.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Local Storage/leveldb/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/Local Storage/leveldb/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Local Storage/leveldb/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/Local Storage/leveldb/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Local Storage/leveldb/LOG.old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Network/Trust Tokens" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/Network/Trust Tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Preferences" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/Preferences" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Session Storage/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/Session Storage/000003.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Session Storage/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/Session Storage/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Session Storage/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/Session Storage/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Session Storage/LOG.old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppData/Launcher/Shared Dictionary/cache/index-dir/the-real-index" beforeDir="false" afterPath="$PROJECT_DIR$/AppData/Launcher/Shared Dictionary/cache/index-dir/the-real-index" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
