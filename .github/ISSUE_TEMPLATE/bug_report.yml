@@ -12,13 +12,13 @@ body:
       label: "Liste des vérifications à faire avant de valider l'ouverture du signalement de bug"
       description: Assurez que vous avez complété ce qui suit, dans le cas contraire, votre rapport peut être refusé
       options:
-        - label: J'ai réussi à reproduire le bug sur le Selvania Launcher (sans mes modifications)
+        - label: J'ai réussi à reproduire le bug sur le DraconiumMC Launcher (sans mes modifications)
           required: true
         - label: Mon code respecte la licence Creative Commons Zero v1.0 Universal
           required: true
-        - label: Mon code respecte les conditions d'utilisation du Selvania Launcher
+        - label: Mon code respecte les conditions d'utilisation du DraconiumMC Launcher
           required: true
-        - label: J'arrive à reproduire le bug sur la dernière version du Selvania Launcher
+        - label: J'arrive à reproduire le bug sur la dernière version du DraconiumMC Launcher
           required: true
   - type: dropdown
     attributes:
