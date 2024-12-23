@@ -3,7 +3,7 @@ const { DistributionAPI } = require('helios-core/common')
 const ConfigManager = require('./configmanager')
 
 
-exports.REMOTE_DISTRO_URL = 'https://launcher.draconium-mc.ovh/distribution.json'
+exports.REMOTE_DISTRO_URL = 'https://launcher.draconium-mc.ovh/nebula/distribution.json'
 
 const api = new DistributionAPI(
     ConfigManager.getLauncherDirectory(),
