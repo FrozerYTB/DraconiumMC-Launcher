@@ -295,7 +295,7 @@ body, button {
 
 #welcomeDescription {
     text-align: justify;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 100;
     text-shadow: rgba(255, 255, 255, 0.75) 0px 0px 20px
 }
@@ -371,7 +371,7 @@ body, button {
 
 /* Styles for dimmer login span. */
 .loginSpanDim {
-    font-size: 12px;
+    font-size: 14px;
     color: #848484;
     font-weight: bold;
 }
@@ -469,7 +469,7 @@ body, button {
 
 /* Login form anchor styles. */
 #loginForm a {
-    font-size: 12px;
+    font-size: 14px;
     color: #848484;
     font-weight: bold;
     text-decoration: none;
@@ -499,7 +499,7 @@ body, button {
 #loginSubheader {
     font-family: 'Avenir Medium';
     margin-bottom: 25px;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 1px;
     font-weight: bold;
 }
@@ -524,7 +524,7 @@ body, button {
 .loginErrorSpan {
     font-family: 'Avenir Medium';
     font-weight: bold;
-    font-size: 8px;
+    font-size: 14px;
     color: #ff1b0c;
     width: 100%;
     text-align: right;
@@ -570,7 +570,7 @@ body, button {
     text-align: center;
     box-sizing: border-box;
     padding: 7.5px;
-    font-size: 10px;
+    font-size: 14px;
     letter-spacing: 1px;
 }
 .loginField:focus {
@@ -581,7 +581,7 @@ body, button {
 }
 .loginField::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.75);
-    font-size: 10px;
+    font-size: 14px;
     letter-spacing: 1px;
     text-align: center;
     font-weight: bold;
@@ -786,7 +786,7 @@ body, button {
 
 /* Disclaimer text styles. */
 .loginDisclaimerText {
-    font-size: 7px;
+    font-size: 14px;
     color: #848484;
     font-weight: bold;
     text-align: center;
@@ -1021,7 +1021,7 @@ body, button {
     background: none;
     border: none;
     padding: 2px 0px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: lightgrey;
     cursor: pointer;
@@ -1148,7 +1148,7 @@ body, button {
 
 /* Settings navigational divider. */
 .settingsNavDivider {
-    width: 75%;
+    width: 50%;
     height: 1px;
     background: rgba(126, 126, 126, 0.57);
     margin-left: auto;
@@ -1225,7 +1225,7 @@ body, button {
     font-family: 'Avenir Medium';
 }
 .settingsTabHeaderDesc {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* Selected server content container */
@@ -1259,7 +1259,7 @@ body, button {
     border: 1px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     background: none;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 3px;
     font-family: 'Avenir Medium';
     transition: 0.25s ease;
@@ -1326,7 +1326,7 @@ body, button {
     color: rgba(255, 255, 255, 0.95);
 }
 .settingsFieldDesc {
-    font-size: 12px;
+    font-size: 14px;
     color: rgba(255, 255, 255, .95);
     margin-top: 5px;
 }
@@ -1452,7 +1452,7 @@ input:checked + .toggleSwitchSlider:before {
     border-radius: 0px !important;
     width: 100%;
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 14px;
     height: 30px;
 }
 
@@ -1460,7 +1460,7 @@ input:checked + .toggleSwitchSlider:before {
 .settingsFileSelButton {
     border: 0px;
     border-radius: 0px 3px 3px 0px;
-    font-size: 12px;
+    font-size: 14px;
     padding: 0px 5px;
     cursor: pointer;
     background: rgba(126, 126, 126, 0.57);
@@ -1590,13 +1590,13 @@ input:checked + .toggleSwitchSlider:before {
     flex-direction: column;
 }
 .settingsAuthAccountDetailTitle {
-    font-size: 16px;
+    font-size: 14px;
     color: grey;
     font-weight: bold;
     font-family: 'Avenir Medium';
 }
 .settingsAuthAccountDetailValue {
-    font-size: 16px;
+    font-size: 14px;
     -webkit-user-select: initial;
 }
 
@@ -1638,7 +1638,7 @@ input:checked + .toggleSwitchSlider:before {
     border: 1px solid rgb(241, 55, 55);
     color: rgb(241, 55, 55);
     background: none;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 3px;
     font-family: 'Avenir Medium';
     transition: 0.25s ease;
@@ -1714,7 +1714,7 @@ input:checked + .toggleSwitchSlider:before {
 #settingsReqModsContent,
 #settingsOptModsContent,
 #settingsDropinModsContent {
-    font-size: 16px;
+    font-size: 14px;
     background: rgba(0, 0, 0, 0.25);
     border-radius: 3px;
     color: white;
@@ -1764,7 +1764,7 @@ input:checked + .toggleSwitchSlider:before {
 /* The version of the mod. */
 .settingsModVersion {
     color: grey;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 /* Disabled toggleswitch for required mods. */
@@ -1822,7 +1822,7 @@ input:checked + .toggleSwitchSlider:before {
 }
 /* Refresh instructions on the file system button. */
 #settingsDropinRefreshNote {
-    font-size: 10px;
+    font-size: 14px;
     pointer-events: none;
 }
 
@@ -1830,7 +1830,7 @@ input:checked + .toggleSwitchSlider:before {
 .settingsDropinRemoveButton {
     background: none;
     border: none;
-    font-size: 10px;
+    font-size: 14px;
     text-align: left;
     padding: 0px;
     color: #c32625;
@@ -1850,7 +1850,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Shaderpack settings description. */
 #settingsShaderpackDesc {
-    font-size: 10px;
+    font-size: 14px;
     margin: 10px 0px;
     color: lightgrey;
     font-weight: bold;
@@ -1955,7 +1955,7 @@ input:checked + .toggleSwitchSlider:before {
 }
 .settingsSelectOptions div {
     border-width: 0px 0px 1px 0px;
-    font-size: 12px;
+    font-size: 14px;
     padding: 4px 16px;
 }
 .settingsSelectOptions div:last-child {
@@ -2058,18 +2058,18 @@ input:checked + .toggleSwitchSlider:before {
     align-items: center;
 }
 .settingsMemoryStatusTitle {
-    font-size: 12px;
+    font-size: 14px;
     color: grey;
     font-weight: bold;
 }
 .settingsMemoryStatusValue {
     color: lightgrey;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* Description for memory management. */
 #settingsMemoryDesc {
-    font-size: 10px;
+    font-size: 14px;
     margin: 20px 0px;
     color: lightgrey;
     font-weight: bold;
@@ -2079,7 +2079,7 @@ input:checked + .toggleSwitchSlider:before {
 #settingsJavaExecDetails {
     font-weight: bold;
     color: grey;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* Main container for the JVM options setting. */
@@ -2103,7 +2103,7 @@ input:checked + .toggleSwitchSlider:before {
     border-radius: 0px 3px 3px 0px !important;
     width: 100%;
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 #settingsJVMOptsContent:focus-within > .settingsJavaIcon {
     background: rgba(126, 126, 126, 0.87);
@@ -2111,7 +2111,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Description for the JVM options setting. */
 #settingsJVMOptsDesc {
-    font-size: 10px;
+    font-size: 14px;
     margin: 20px 0px;
     color: lightgrey;
     font-weight: bold;
@@ -2183,7 +2183,7 @@ input:checked + .toggleSwitchSlider:before {
     color: white;
     height: 15px;
     width: 15px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 17px;
 }
 
@@ -2194,7 +2194,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Release type text. */
 #settingsAboutCurrentVersionTitle {
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Avenir Medium';
     color: #23aa23;
     font-weight: bold;
@@ -2202,7 +2202,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Current version text. */
 #settingsAboutCurrentVersionLine {
-    font-size: 10px;
+    font-size: 14px;
     color: grey;
     font-weight: bold;
 }
@@ -2216,7 +2216,7 @@ input:checked + .toggleSwitchSlider:before {
 .settingsAboutButton {
     background: none;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
     color: grey;
     padding: 0px 5px;
     transition: 0.25s ease;
@@ -2257,14 +2257,14 @@ input:checked + .toggleSwitchSlider:before {
 }
 /* Changelog header label. */
 .settingsChangelogLabel {
-    font-size: 12px;
+    font-size: 14px;
     color: grey;
     font-weight: bold;
 }
 
 /* Changelog text content container. */
 .settingsChangelogText {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* Styles for the changelog elements. */
@@ -2359,7 +2359,7 @@ input:checked + .toggleSwitchSlider:before {
     border-bottom: 1px solid rgba(126, 126, 126, 0.57);
 }
 #settingsUpdateTitle {
-    font-size: 16px;
+    font-size: 14px;
     padding-left: 10px;
     font-weight: bold;
 }
@@ -2382,7 +2382,7 @@ input:checked + .toggleSwitchSlider:before {
     color: white;
     height: 15px;
     width: 15px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 17px;
 }
 
@@ -2393,7 +2393,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Release type text. */
 #settingsUpdateVersionTitle {
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Avenir Medium';
     color: #23aa23;
     font-weight: bold;
@@ -2401,7 +2401,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Current version text. */
 #settingsUpdateVersionLine {
-    font-size: 10px;
+    font-size: 14px;
     color: grey;
     font-weight: bold;
 }
@@ -2420,7 +2420,7 @@ input:checked + .toggleSwitchSlider:before {
     padding-left: 10px;
     background: none;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     outline: none;
@@ -2626,7 +2626,7 @@ input:checked + .toggleSwitchSlider:before {
 #newsArticleDate,
 #newsArticleAuthor {
     display: inline-block;
-    font-size: 10px;
+    font-size: 14px;
     padding: 0px 5px;
     font-weight: bold;
     border-radius: 2px;
@@ -2648,7 +2648,7 @@ input:checked + .toggleSwitchSlider:before {
 #newsArticleComments {
     margin-top: 5px;
     display: inline-block;
-    font-size: 10px;
+    font-size: 14px;
     color: #ffffff;
     text-decoration: none;
     transition: 0.25s ease;
@@ -2672,7 +2672,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Article content styles. */
 #newsArticleContentScrollable {
-    font-size: 12px;
+    font-size: 14px;
     overflow-y: scroll;
     height: 100%;
     padding: 0px 15px 0px 15px;
@@ -2710,7 +2710,7 @@ input:checked + .toggleSwitchSlider:before {
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     transition: 0.25s ease;
     width: 100%;
     border-bottom: 1px solid white;
@@ -2758,7 +2758,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Navigation status span. */
 #newsNavigationStatus {
-    font-size: 12px;
+    font-size: 14px;
     margin: 0px 15px;
 }
 
@@ -2826,7 +2826,7 @@ input:checked + .toggleSwitchSlider:before {
 }
 /* News error retry button styles. */
 #newsErrorRetry {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     background: none;
@@ -2911,7 +2911,7 @@ input:checked + .toggleSwitchSlider:before {
     top: 115%;
     left: -17.5px;
     font-family: 'Avenir Medium';
-    font-size: 12px;
+    font-size: 14px;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
 }
 #updateAvailableTooltip::after {
@@ -3114,7 +3114,7 @@ input:checked + .toggleSwitchSlider:before {
     position: absolute;
     z-index: 1;
     right: 130%;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
 }
@@ -3181,7 +3181,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Style for a general label on the bottom of the landing view. */
 .bot_label {
-    font-size: 9px;
+    font-size: 14px;
     letter-spacing: 1px;
     font-weight: bold;
     text-shadow: 0px 0px 0px #bebcbb;
@@ -3209,10 +3209,10 @@ input:checked + .toggleSwitchSlider:before {
 /* Span which displays the player count of the selected server. */
 #player_count {
     color: #949494;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 900;
     text-shadow: 0px 0px 20px #949494;
-    margin-left: 10px;
+    margin-left: 3px;
 }
 
 /* Wrapper container for the mojang status bar. */
@@ -3243,7 +3243,7 @@ input:checked + .toggleSwitchSlider:before {
     padding: 5px 10px;
     z-index: 1;
     font-family: 'Avenir Medium';
-    font-size: 12px;
+    font-size: 14px;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
     bottom: calc(100% + 15px);
     transform: translateX(-50%);
@@ -3291,7 +3291,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Non essential service title text. */
 #mojangStatusNETitle {
-    font-size: 10px;
+    font-size: 14px;
     padding: 0px 3px;
     text-align: center;
     letter-spacing: 1px;
@@ -3305,7 +3305,7 @@ input:checked + .toggleSwitchSlider:before {
 /* Displays the name of the mojang service. */
 .mojangStatusName {
     width: 100%;
-    font-size: 10px;
+    font-size: 14px;
     letter-spacing: 1px;
     line-height: 12px;
     padding: 6px 0px;
@@ -3376,7 +3376,7 @@ input:checked + .toggleSwitchSlider:before {
     font-weight: 900;
     letter-spacing: 2px;
     text-shadow: 0px 0px 0px #bebcbb;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 30px;
     display: flex;
     transition: 0.25s ease;
@@ -3484,7 +3484,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Span which displays information about the status of the launch process. */
 #launch_details_text {
-    font-size: 11px;
+    font-size: 14px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -3566,7 +3566,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Overlay description styles. */
 #overlayDesc {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     -webkit-user-select: initial;
 }
@@ -3603,7 +3603,7 @@ input:checked + .toggleSwitchSlider:before {
 /* Overlay dismiss option styles. */
 #overlayDismiss {
     font-weight: bold;
-    font-size: 10px;
+    font-size: 14px;
     text-decoration: none;
     padding-top: 2.5px;
     background: none;
@@ -3769,7 +3769,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Description for the server listing. */
 .serverListingDescription {
-    font-size: 10px;
+    font-size: 14px;
     line-height: 10px;
     font-weight: bold;
     text-align: left;
@@ -3784,7 +3784,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* The minecraft version of the server listing. */
 .serverListingVersion {
-    font-size: 10px;
+    font-size: 14px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -3799,7 +3799,7 @@ input:checked + .toggleSwitchSlider:before {
 /* The revision version of the server's manifest. */
 .serverListingRevision {
     color: #969696;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 12px;
     padding: 0px 5px;
 }
@@ -3823,7 +3823,7 @@ input:checked + .toggleSwitchSlider:before {
     position: absolute;
     z-index: 1;
     left: 130%;
-    font-size: 10px;
+    font-size: 14px;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
 }
 .serverListingStarTooltip::after {
@@ -3883,7 +3883,7 @@ input:checked + .toggleSwitchSlider:before {
 #serverSelectCancel,
 #accountSelectCancel {
     font-weight: bold;
-    font-size: 10px;
+    font-size: 14px;
     text-decoration: none;
     padding-top: 2.5px;
     color: rgba(202, 202, 202, 0.75);
