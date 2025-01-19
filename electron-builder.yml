@@ -1,5 +1,5 @@
-appId: 'helioslauncher'
-productName: 'Helios Launcher'
+appId: 'draconium-mc-launcher'
+productName: 'DraconiumMC Launcher'
 artifactName: '${productName}-setup-${version}.${ext}'
 
 copyright: 'Copyright © 2018-2024 Daniel Scalzi'
