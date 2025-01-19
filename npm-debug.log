@@ -1,0 +1,45 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\froze\\Documents\\GitHub\\DraconiumMC-Launcher\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'dist',
+1 verbose cli   '--',
+1 verbose cli   '-w'
+1 verbose cli ]
+2 info using npm@2.15.12
+3 info using node@v20.18.1
+4 verbose run-script [ 'predist', 'dist', 'postdist' ]
+5 info predist DraconiumMC-Launcher@0.0.1
+6 info dist DraconiumMC-Launcher@0.0.1
+7 verbose unsafe-perm in lifecycle true
+8 info DraconiumMC-Launcher@0.0.1 Failed to exec dist script
+9 verbose stack Error: DraconiumMC-Launcher@0.0.1 dist: `electron-builder build "-w"`
+9 verbose stack Exit status 1
+9 verbose stack     at EventEmitter.<anonymous> (C:\Users\froze\Documents\GitHub\DraconiumMC-Launcher\node_modules\npm\lib\utils\lifecycle.js:217:16)
+9 verbose stack     at EventEmitter.emit (node:events:518:28)
+9 verbose stack     at ChildProcess.<anonymous> (C:\Users\froze\Documents\GitHub\DraconiumMC-Launcher\node_modules\npm\lib\utils\spawn.js:24:14)
+9 verbose stack     at ChildProcess.emit (node:events:518:28)
+9 verbose stack     at maybeClose (node:internal/child_process:1104:16)
+9 verbose stack     at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+10 verbose pkgid DraconiumMC-Launcher@0.0.1
+11 verbose cwd C:\Users\froze\Documents\GitHub\DraconiumMC-Launcher
+12 error Windows_NT 10.0.22631
+13 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\froze\\Documents\\GitHub\\DraconiumMC-Launcher\\node_modules\\npm\\bin\\npm-cli.js" "run" "dist" "--" "-w"
+14 error node v20.18.1
+15 error npm  v2.15.12
+16 error code ELIFECYCLE
+17 error DraconiumMC-Launcher@0.0.1 dist: `electron-builder build "-w"`
+17 error Exit status 1
+18 error Failed at the DraconiumMC-Launcher@0.0.1 dist script 'electron-builder build "-w"'.
+18 error This is most likely a problem with the DraconiumMC-Launcher package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     electron-builder build "-w"
+18 error You can get information on how to open an issue for this project with:
+18 error     npm bugs DraconiumMC-Launcher
+18 error Or if that isn't available, you can get their info via:
+18 error
+18 error     npm owner ls DraconiumMC-Launcher
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]

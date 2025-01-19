@@ -1,4 +1,4 @@
-appId: 'draconium-mc-launcher'
+appId: 'draconiummclauncher'
 productName: 'DraconiumMC Launcher'
 artifactName: '${productName}-setup-${version}.${ext}'
 
