@@ -3209,9 +3209,9 @@ input:checked + .toggleSwitchSlider:before {
 /* Span which displays the player count of the selected server. */
 #player_count {
     color: #949494;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 900;
-    text-shadow: 0px 0px 20px #949494;
+    text-shadow: 0px 0px 12px #949494;
     margin-left: 3px;
 }
 
