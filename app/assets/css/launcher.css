@@ -922,7 +922,7 @@ body, button {
     height: 10em;
     transform-style: preserve-3d;
     transform-origin: 50%;
-    transform: rotateY(50%);
+    transform: rotateY(50deg);
     perspective-origin: 50% 50%;
     perspective: 340px;
     background-size: 10em 10em;
