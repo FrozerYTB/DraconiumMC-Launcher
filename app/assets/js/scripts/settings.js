@@ -915,29 +915,29 @@ function bindDropinModsRemoveButton(){
  */
 function bindDropinModFileSystemButton(){
     const fsBtn = document.getElementById('settingsDropinFileSystemButton')
-    fsBtn.onclick = () => {
-        DropinModUtil.validateDir(CACHE_SETTINGS_MODS_DIR)
-        shell.openPath(CACHE_SETTINGS_MODS_DIR)
-    }
-    fsBtn.ondragenter = e => {
-        e.dataTransfer.dropEffect = 'move'
-        fsBtn.setAttribute('drag', '')
-        e.preventDefault()
-    }
-    fsBtn.ondragover = e => {
-        e.preventDefault()
-    }
-    fsBtn.ondragleave = e => {
-        fsBtn.removeAttribute('drag')
-    }
+    // fsBtn.onclick = () => {
+    //     DropinModUtil.validateDir(CACHE_SETTINGS_MODS_DIR)
+    //     shell.openPath(CACHE_SETTINGS_MODS_DIR)
+    // }bindDropinModFileSystemButton()
+    // fsBtn.ondragenter = e => {
+    //     e.dataTransfer.dropEffect = 'move'
+    //     fsBtn.setAttribute('drag', '')
+    //     e.preventDefault()
+    // }
+    // fsBtn.ondragover = e => {
+    //     e.preventDefault()
+    // }
+    // fsBtn.ondragleave = e => {
+    //     fsBtn.removeAttribute('drag')
+    // }
 
-    fsBtn.ondrop = async e => {
-        fsBtn.removeAttribute('drag')
-        e.preventDefault()
-
-        DropinModUtil.addDropinMods(e.dataTransfer.files, CACHE_SETTINGS_MODS_DIR)
-        await reloadDropinMods()
-    }
+    // fsBtn.ondrop = async e => {
+    //     fsBtn.removeAttribute('drag')
+    //     e.preventDefault()
+    //
+    //     DropinModUtil.addDropinMods(e.dataTransfer.files, CACHE_SETTINGS_MODS_DIR)
+    //     await reloadDropinMods()
+    // }
 }
 
 /**
@@ -978,12 +978,12 @@ document.addEventListener('keydown', async (e) => {
     }
 })
 
-async function reloadDropinMods(){
-    await resolveDropinModsForUI()
-    bindDropinModsRemoveButton()
-    bindDropinModFileSystemButton()
-    bindModsToggleSwitch()
-}
+// async function reloadDropinMods(){
+//     await resolveDropinModsForUI()
+//     bindDropinModsRemoveButton()
+//     bindDropinModFileSystemButton()
+//     bindModsToggleSwitch()
+// }
 
 // Shaderpack
 
