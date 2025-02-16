@@ -106,10 +106,10 @@ body, button {
 
 /* Logo du cadre (Windows uniquement). */
 #frameTitleDock {
-    padding: 0px 12px !important;
+    padding: 0px 13px !important;
 }
 #frameTitleText {
-    font-size: 12px !important;
+    font-size: 13px !important;
     font-family: 'Avenir Medium';
     letter-spacing: 0.5px;
 }
@@ -164,8 +164,8 @@ body, button {
 
 /* Styles des boutons du cadre Darwin. */
 .frameButtonDarwin {
-    height: 12px;
-    width: 12px;
+    height: 13px;
+    width: 13px;
     border-radius: 50%;
     border: 0px;
     margin-left: 5px;
@@ -278,7 +278,7 @@ body, button {
     background: rgba(1, 2, 1, 0.5);
     height: 125px;
     width: 125px;
-    box-shadow: 0px 0px 12px 0px rgb(0, 0, 0);
+    box-shadow: 0px 0px 13px 0px rgb(0, 0, 0);
     margin-bottom: 5%;
     margin-top: 10%;
 }
@@ -302,7 +302,7 @@ body, button {
 
 #welcomeDescCTA {
     text-align: center;
-    font-size: 12px !important;
+    font-size: 13px !important;
     font-weight: 100;
     text-shadow: rgba(255, 255, 255, 0.75) 0px 0px 20px
 }
@@ -314,7 +314,7 @@ body, button {
     letter-spacing: 2px;
     border: none;
     padding: 15px 5px;
-    margin: 12px 0px;
+    margin: 13px 0px;
     cursor: pointer;
     position: relative;
     right: -20px;
@@ -371,7 +371,7 @@ body, button {
 
 /* Styles pour le texte de connexion atténué. */
 .loginSpanDim {
-    font-size: 12px !important;
+    font-size: 13px !important;
     color: #848484;
     font-weight: bold;
 }
@@ -469,7 +469,7 @@ body, button {
 
 /* Styles des liens du formulaire de connexion. */
 #loginForm a {
-    font-size: 12px !important;
+    font-size: 13px !important;
     color: #848484;
     font-weight: bold;
     text-decoration: none;
@@ -491,7 +491,7 @@ body, button {
     background: rgba(1, 2, 1, 0.5);
     height: 125px;
     width: 125px;
-    box-shadow: 0px 0px 12px 0px rgb(0, 0, 0);
+    box-shadow: 0px 0px 13px 0px rgb(0, 0, 0);
     margin-bottom: 20px;
 }
 
@@ -499,7 +499,7 @@ body, button {
 #loginSubheader {
     font-family: 'Avenir Medium';
     margin-bottom: 25px;
-    font-size: 12px !important;
+    font-size: 13px !important;
     letter-spacing: 1px;
     font-weight: bold;
 }
@@ -570,7 +570,7 @@ body, button {
     text-align: center;
     box-sizing: border-box;
     padding: 7.5px;
-    font-size: 12px !important;
+    font-size: 13px !important;
     letter-spacing: 1px;
 }
 .loginField:focus {
@@ -581,7 +581,7 @@ body, button {
 }
 .loginField::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.75);
-    font-size: 12px !important;
+    font-size: 13px !important;
     letter-spacing: 1px;
     text-align: center;
     font-weight: bold;
@@ -604,7 +604,7 @@ body, button {
 
 /* Texte de l'option "se souvenir". */
 #loginRememberText {
-    padding-right: 12px !important;
+    padding-right: 13px !important;
     transition: 0.25s ease;
 }
 
@@ -615,7 +615,7 @@ body, button {
     letter-spacing: 2px;
     border: none;
     padding: 15px 5px;
-    margin: 12px 0px;
+    margin: 13px 0px;
     cursor: pointer;
     position: relative;
     right: -20px;
@@ -817,8 +817,8 @@ body, button {
 /* Create a custom checkbox. */
 .loginCheckmark {
     position: relative;
-    height: 12px !important;
-    width: 12px !important;
+    height: 13px !important;
+    width: 13px !important;
     border: 1px solid #848484;
     border-radius: 1px;
     background: none;
@@ -984,7 +984,7 @@ body, button {
 .loginOptionActions {
     display: flex;
     flex-direction: column;
-    row-gap: 12px !important;
+    row-gap: 13px !important;
 }
 
 .loginOptionButtonContainer {
@@ -1200,8 +1200,8 @@ body, button {
     display: none;
 }
 .settingsTab::-webkit-scrollbar-thumb {
-    border-radius: 12px !important;
-    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.50);
+    border-radius: 13px !important;
+    box-shadow: inset 0 0 13px rgba(255, 255, 255, 0.50);
 }
 
 /* Add spacing to the top of each settings tab. */
@@ -1225,7 +1225,7 @@ body, button {
     font-family: 'Avenir Medium';
 }
 .settingsTabHeaderDesc {
-    font-size: 12px !important;
+    font-size: 13px !important;
 }
 
 /* Selected server content container */
@@ -1259,7 +1259,7 @@ body, button {
     border: 1px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     background: none;
-    font-size: 12px !important;
+    font-size: 13px !important;
     border-radius: 3px;
     font-family: 'Avenir Medium';
     transition: 0.25s ease;
@@ -1321,12 +1321,12 @@ body, button {
     flex-direction: column;
 }
 .settingsFieldTitle {
-    font-size: 12px !important;
+    font-size: 13px !important;
     font-family: 'Avenir Medium';
     color: rgba(255, 255, 255, 0.95);
 }
 .settingsFieldDesc {
-    font-size: 12px !important;
+    font-size: 13px !important;
     color: rgba(255, 255, 255, .95);
     margin-top: 5px;
 }
@@ -1423,7 +1423,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* File selector title. */
 .settingsFileSelTitle {
-    margin-bottom: 12px !important;
+    margin-bottom: 13px !important;
 }
 
 /* Wrapper container for the actionable elements. */
@@ -1451,8 +1451,8 @@ input:checked + .toggleSwitchSlider:before {
 .settingsFileSelVal {
     border-radius: 0px !important;
     width: 100%;
-    padding: 5px 12px !important;
-    font-size: 12px !important;
+    padding: 5px 13px !important;
+    font-size: 13px !important;
     height: 30px;
 }
 
@@ -1460,7 +1460,7 @@ input:checked + .toggleSwitchSlider:before {
 .settingsFileSelButton {
     border: 0px;
     border-radius: 0px 3px 3px 0px;
-    font-size: 12px !important;
+    font-size: 13px !important;
     padding: 0px 5px;
     cursor: pointer;
     background: rgba(126, 126, 126, 0.57);
@@ -1479,7 +1479,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Description for the file selector. */
 .settingsFileSelDesc {
-    font-size: 12px !important;
+    font-size: 13px !important;
     margin: 20px 0px;
     color: lightgrey;
     width: 89%;
@@ -1503,7 +1503,7 @@ input:checked + .toggleSwitchSlider:before {
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding: 12px 0px;
+    padding: 13px 0px;
     border-bottom: 1px solid #ffffff85;
     margin-bottom: 30px;
 }
@@ -1542,10 +1542,10 @@ input:checked + .toggleSwitchSlider:before {
     margin-bottom: 5%;
 }
 .settingsCurrentAccounts > .settingsAuthAccount:not(:last-child) {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 }
 .settingsCurrentAccounts > .settingsAuthAccount:not(:first-child) {
-    margin-top: 12px;
+    margin-top: 13px;
 }
 
 /* Auth account shared styles. */
@@ -1590,13 +1590,13 @@ input:checked + .toggleSwitchSlider:before {
     flex-direction: column;
 }
 .settingsAuthAccountDetailTitle {
-    font-size: 12px !important;
+    font-size: 13px !important;
     color: grey;
     font-weight: bold;
     font-family: 'Avenir Medium';
 }
 .settingsAuthAccountDetailValue {
-    font-size: 12px !important;
+    font-size: 13px !important;
     -webkit-user-select: initial;
 }
 
@@ -1606,7 +1606,7 @@ input:checked + .toggleSwitchSlider:before {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 12px;
+    padding: 13px;
 }
 
 /* Account select button shared styles. */
@@ -1638,7 +1638,7 @@ input:checked + .toggleSwitchSlider:before {
     border: 1px solid rgb(241, 55, 55);
     color: rgb(241, 55, 55);
     background: none;
-    font-size: 12px !important;
+    font-size: 13px !important;
     border-radius: 3px;
     font-family: 'Avenir Medium';
     transition: 0.25s ease;
@@ -1675,7 +1675,7 @@ input:checked + .toggleSwitchSlider:before {
 #settingsGameResolutionContent {
     display: flex;
     align-items: center;
-    padding-top: 12px;
+    padding-top: 13px;
 }
 #settingsGameResolutionCross {
     color: grey;
@@ -1698,9 +1698,9 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Mod sub-container header text. */
 .settingsModsHeader {
-    padding-bottom: 12px;
+    padding-bottom: 13px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 }
 
 /* Mod elements sub-containers. */
@@ -1714,7 +1714,7 @@ input:checked + .toggleSwitchSlider:before {
 #settingsReqModsContent,
 #settingsOptModsContent,
 #settingsDropinModsContent {
-    font-size: 12px !important;
+    font-size: 13px !important;
     background: rgba(0, 0, 0, 0.25);
     border-radius: 3px;
     color: white;
@@ -1723,10 +1723,10 @@ input:checked + .toggleSwitchSlider:before {
 /* Mod elements. */
 .settingsMod,
 .settingsDropinMod {
-    padding: 12px;
+    padding: 13px;
 }
 .settingsSubMod {
-    padding: 12px 0px 12px 15px;
+    padding: 13px 0px 13px 15px;
     margin-left: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -1764,7 +1764,7 @@ input:checked + .toggleSwitchSlider:before {
 /* The version of the mod. */
 .settingsModVersion {
     color: grey;
-    font-size: 12px !important;
+    font-size: 13px !important;
 }
 
 /* Disabled toggleswitch for required mods. */
@@ -1785,19 +1785,19 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Curve the left border for submods. */
 .settingsSubModContainer > .settingsSubMod:first-child {
-    border-top-left-radius: 12px;
+    border-top-left-radius: 13px;
 }
 .settingsSubModContainer > .settingsSubMod:last-child {
-    border-bottom-left-radius: 12px;
+    border-bottom-left-radius: 13px;
 }
 .settingsSubModContainer > .settingsSubMod:only-child {
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
 }
 
 /* Wrapper container for all submods. */
 .settingsSubModContainer {
-    margin-top: 12px;
+    margin-top: 13px;
 }
 
 /* Button to open the mods folder for drop-in mods. */
@@ -1812,7 +1812,7 @@ input:checked + .toggleSwitchSlider:before {
     cursor: pointer;
     outline: none;
     transition: 0.25s ease;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 }
 #settingsDropinFileSystemButton:hover,
 #settingsDropinFileSystemButton:focus,
@@ -1822,7 +1822,7 @@ input:checked + .toggleSwitchSlider:before {
 }
 /* Refresh instructions on the file system button. */
 #settingsDropinRefreshNote {
-    font-size: 12px !important;
+    font-size: 13px !important;
     pointer-events: none;
 }
 
@@ -1830,7 +1830,7 @@ input:checked + .toggleSwitchSlider:before {
 .settingsDropinRemoveButton {
     background: none;
     border: none;
-    font-size: 12px !important;
+    font-size: 13px !important;
     text-align: left;
     padding: 0px;
     color: #c32625;
@@ -1850,8 +1850,8 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Shaderpack settings description. */
 #settingsShaderpackDesc {
-    font-size: 12px !important;
-    margin: 12px 0px;
+    font-size: 13px !important;
+    margin: 13px 0px;
     color: lightgrey;
     font-weight: bold;
     width: 89%;
@@ -1870,7 +1870,7 @@ input:checked + .toggleSwitchSlider:before {
     cursor: pointer;
     outline: none;
     transition: 0.25s ease;
-    font-size: 12px !important;
+    font-size: 13px !important;
     padding: 6px 11px;
     margin-right: 5px;
 }
@@ -1891,7 +1891,7 @@ input:checked + .toggleSwitchSlider:before {
 .settingsSelectSelected {
     border-radius: 3px;
     border-width: 1px;
-    font-size: 12px !important;
+    font-size: 13px !important;
     padding: 6px 16px;
 }
 
@@ -1900,7 +1900,7 @@ input:checked + .toggleSwitchSlider:before {
     position: absolute;
     content: "";
     top: calc(50% - 3px);
-    right: 12px;
+    right: 13px;
     width: 0;
     height: 0;
     border: 6px solid transparent;
@@ -1940,8 +1940,8 @@ input:checked + .toggleSwitchSlider:before {
     display: none;
 }
 .settingsSelectOptions::-webkit-scrollbar-thumb {
-    border-radius: 12px;
-    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.50);
+    border-radius: 13px;
+    box-shadow: inset 0 0 13px rgba(255, 255, 255, 0.50);
 }
 
 /* Shared styles between options and selection div. */
@@ -1955,7 +1955,7 @@ input:checked + .toggleSwitchSlider:before {
 }
 .settingsSelectOptions div {
     border-width: 0px 0px 1px 0px;
-    font-size: 12px !important;
+    font-size: 13px !important;
     padding: 4px 16px;
 }
 .settingsSelectOptions div:last-child {
@@ -2000,7 +2000,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Memory management title. */
 #settingsMemoryTitle {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
     padding-bottom: 5px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -2022,7 +2022,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Header for memory sliders. */
 .settingsMemoryHeader {
-    font-size: 12px !important;
+    font-size: 13px !important;
 }
 
 /* Wrapper container for a memory slider and label. */
@@ -2034,7 +2034,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Label which displays a memory slider's value. */
 .settingsMemoryLabel {
-    font-size: 12px !important;
+    font-size: 13px !important;
     margin-right: 2%;
 }
 
@@ -2058,7 +2058,7 @@ input:checked + .toggleSwitchSlider:before {
     align-items: center;
 }
 .settingsMemoryStatusTitle {
-    font-size: 12px !important;
+    font-size: 13px !important;
     color: grey;
     font-weight: bold;
 }
@@ -2069,7 +2069,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Description for memory management. */
 #settingsMemoryDesc {
-    font-size: 12px !important;
+    font-size: 13px !important;
     margin: 20px 0px;
     color: lightgrey;
     font-weight: bold;
@@ -2079,7 +2079,7 @@ input:checked + .toggleSwitchSlider:before {
 #settingsJavaExecDetails {
     font-weight: bold;
     color: grey;
-    font-size: 12px !important;
+    font-size: 13px !important;
 }
 
 /* Main container for the JVM options setting. */
@@ -2089,7 +2089,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* JVM options title. */
 #settingsJVMOptsTitle {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 }
 
 /* Wrapper container for the actionable elements. */
@@ -2102,8 +2102,8 @@ input:checked + .toggleSwitchSlider:before {
 #settingsJVMOptsVal {
     border-radius: 0px 3px 3px 0px !important;
     width: 100%;
-    padding: 5px 12px;
-    font-size: 12px !important;
+    padding: 5px 13px;
+    font-size: 13px !important;
 }
 #settingsJVMOptsContent:focus-within > .settingsJavaIcon {
     background: rgba(126, 126, 126, 0.87);
@@ -2111,7 +2111,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Description for the JVM options setting. */
 #settingsJVMOptsDesc {
-    font-size: 12px !important;
+    font-size: 13px !important;
     margin: 20px 0px;
     color: lightgrey;
     font-weight: bold;
@@ -2124,7 +2124,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Tailored style for the data directory header. */
 #settingsDataDirTitle {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 }
 
 /* * *
@@ -2163,14 +2163,14 @@ input:checked + .toggleSwitchSlider:before {
 }
 #settingsAboutTitle {
     font-size: 23px;
-    padding-left: 12px;
+    padding-left: 13px;
 }
 
 /* Current version container. */
 #settingsAboutCurrentVersion {
     display: flex;
     align-items: center;
-    padding-top: 12px;
+    padding-top: 13px;
 }
 
 /* Checkmark next to the version information. */
@@ -2179,22 +2179,22 @@ input:checked + .toggleSwitchSlider:before {
     background: #23aa23;
     text-align: center;
     font-weight: bold;
-    margin: 11px 12px;
+    margin: 11px 13px;
     color: white;
     height: 15px;
     width: 15px;
-    font-size: 12px !important;
+    font-size: 13px !important;
     line-height: 17px;
 }
 
 /* Current version details container. */
 #settingsAboutCurrentVersionDetails {
-    margin-left: 12px;
+    margin-left: 13px;
 }
 
 /* Release type text. */
 #settingsAboutCurrentVersionTitle {
-    font-size: 12px !important;
+    font-size: 13px !important;
     font-family: 'Avenir Medium';
     color: #23aa23;
     font-weight: bold;
@@ -2202,7 +2202,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Current version text. */
 #settingsAboutCurrentVersionLine {
-    font-size: 12px !important;
+    font-size: 13px !important;
     color: grey;
     font-weight: bold;
 }
@@ -2216,7 +2216,7 @@ input:checked + .toggleSwitchSlider:before {
 .settingsAboutButton {
     background: none;
     border: none;
-    font-size: 12px !important;
+    font-size: 13px !important;
     color: grey;
     padding: 0px 5px;
     transition: 0.25s ease;
@@ -2251,20 +2251,20 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Changelog header container. */
 .settingsChangelogHeadline {
-    padding-bottom: 12px;
-    margin-bottom: 12px;
+    padding-bottom: 13px;
+    margin-bottom: 13px;
     border-bottom: 1px solid rgba(126, 126, 126, 0.57);
 }
 /* Changelog header label. */
 .settingsChangelogLabel {
-    font-size: 12px !important;
+    font-size: 13px !important;
     color: grey;
     font-weight: bold;
 }
 
 /* Changelog text content container. */
 .settingsChangelogText {
-    font-size: 12px !important;
+    font-size: 13px !important;
 }
 
 /* Styles for the changelog elements. */
@@ -2313,7 +2313,7 @@ input:checked + .toggleSwitchSlider:before {
 .settingsChangelogText .highlight {
     background: rgba(0, 0, 0, 0.30);
     user-select: initial;
-    padding: 5px 12px;
+    padding: 5px 13px;
 }
 .settingsChangelogText .highlight pre {
     margin: 0px;
@@ -2360,7 +2360,7 @@ input:checked + .toggleSwitchSlider:before {
 }
 #settingsUpdateTitle {
     font-size: 16px;
-    padding-left: 12px;
+    padding-left: 13px;
     font-weight: bold;
 }
 
@@ -2368,7 +2368,7 @@ input:checked + .toggleSwitchSlider:before {
 #settingsUpdateVersion {
     display: flex;
     align-items: center;
-    padding: 12px 0px;
+    padding: 13px 0px;
     border-bottom: 1px solid rgba(126, 126, 126, 0.57);
 }
 
@@ -2378,22 +2378,22 @@ input:checked + .toggleSwitchSlider:before {
     background: #23aa23;
     text-align: center;
     font-weight: bold;
-    margin: 11px 12px;
+    margin: 11px 13px;
     color: white;
     height: 15px;
     width: 15px;
-    font-size: 12px !important;
+    font-size: 13px !important;
     line-height: 17px;
 }
 
 /* Update version details container. */
 #settingsUpdateVersionDetails {
-    margin-left: 12px;
+    margin-left: 13px;
 }
 
 /* Release type text. */
 #settingsUpdateVersionTitle {
-    font-size: 12px !important;
+    font-size: 13px !important;
     font-family: 'Avenir Medium';
     color: #23aa23;
     font-weight: bold;
@@ -2401,15 +2401,15 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Current version text. */
 #settingsUpdateVersionLine {
-    font-size: 12px !important;
+    font-size: 13px !important;
     color: grey;
     font-weight: bold;
 }
 
 /* Update action container. */
 #settingsUpdateActionContainer {
-    padding-top: 12px;
-    font-size: 12px !important;
+    padding-top: 13px;
+    font-size: 13px !important;
     font-weight: bold;
 }
 
@@ -2417,10 +2417,10 @@ input:checked + .toggleSwitchSlider:before {
 #settingsUpdateActionButton {
     display: flex;
     flex-direction: column;
-    padding-left: 12px;
+    padding-left: 13px;
     background: none;
     border: none;
-    font-size: 12px !important;
+    font-size: 13px !important;
     font-weight: bold;
     cursor: pointer;
     outline: none;
@@ -2513,7 +2513,7 @@ input:checked + .toggleSwitchSlider:before {
     position: relative;
     z-index: 500;
     transition: top 2s ease;
-    top: 12px;
+    top: 13px;
 }
 #landingContainer > #lower > #right {
     position: relative;
@@ -2626,7 +2626,7 @@ input:checked + .toggleSwitchSlider:before {
 #newsArticleDate,
 #newsArticleAuthor {
     display: inline-block;
-    font-size: 12px !important;
+    font-size: 13px !important;
     padding: 0px 5px;
     font-weight: bold;
     border-radius: 2px;
@@ -2648,7 +2648,7 @@ input:checked + .toggleSwitchSlider:before {
 #newsArticleComments {
     margin-top: 5px;
     display: inline-block;
-    font-size: 12px !important;
+    font-size: 13px !important;
     color: #ffffff;
     text-decoration: none;
     transition: 0.25s ease;
@@ -2672,7 +2672,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Article content styles. */
 #newsArticleContentScrollable {
-    font-size: 12px !important;
+    font-size: 13px !important;
     overflow-y: scroll;
     height: 100%;
     padding: 0px 15px 0px 15px;
@@ -2702,8 +2702,8 @@ input:checked + .toggleSwitchSlider:before {
     display: none;
 }
 #newsArticleContentScrollable::-webkit-scrollbar-thumb {
-    border-radius: 12px;
-    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.50);
+    border-radius: 13px;
+    box-shadow: inset 0 0 13px rgba(255, 255, 255, 0.50);
 }
 .bbCodeSpoilerButton {
     background: none;
@@ -2749,7 +2749,7 @@ input:checked + .toggleSwitchSlider:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
     -webkit-user-select: none;
     position: absolute;
     bottom: 15px;
@@ -2758,7 +2758,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Navigation status span. */
 #newsNavigationStatus {
-    font-size: 12px !important;
+    font-size: 13px !important;
     margin: 0px 15px;
 }
 
@@ -2826,7 +2826,7 @@ input:checked + .toggleSwitchSlider:before {
 }
 /* News error retry button styles. */
 #newsErrorRetry {
-    font-size: 12px !important;
+    font-size: 13px !important;
     font-weight: bold;
     cursor: pointer;
     background: none;
@@ -2911,7 +2911,7 @@ input:checked + .toggleSwitchSlider:before {
     top: 115%;
     left: -17.5px;
     font-family: 'Avenir Medium';
-    font-size: 12px !important;
+    font-size: 13px !important;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
 }
 #updateAvailableTooltip::after {
@@ -2976,7 +2976,7 @@ input:checked + .toggleSwitchSlider:before {
     background: rgba(1, 2, 1, 0.5);
     height: 70px;
     width: 70px;
-    box-shadow: 0px 0px 12px 0px rgb(0, 0, 0);
+    box-shadow: 0px 0px 13px 0px rgb(0, 0, 0);
     overflow: hidden;
     position: relative;
     background-position: center;
@@ -3013,7 +3013,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* User profile name text. */
 #user_text {
-    font-size: 12px !important;
+    font-size: 13px !important;
     min-width: 135px;
     font-weight: 900;
     letter-spacing: 1px;
@@ -3052,18 +3052,18 @@ input:checked + .toggleSwitchSlider:before {
 /* Divider bar between the external and internal icons. */
 .mediaDivider {
     height: 1px;
-    width: 12px;
+    width: 13px;
     background: rgb(255, 255, 255);
-    margin: 12px 0px;
+    margin: 13px 0px;
 }
 
 /* Social media icon shared styles. */
 .mediaSVG {
     fill: #ffffff;
-    height: 12px;
+    height: 13px;
     transition: 0.25s ease;
     cursor: pointer;
-    height: 12px;
+    height: 13px;
     width: 25px;
 }
 .mediaSVG:hover,
@@ -3114,7 +3114,7 @@ input:checked + .toggleSwitchSlider:before {
     position: absolute;
     z-index: 1;
     right: 130%;
-    font-size: 12px !important;
+    font-size: 13px !important;
     line-height: 20px;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
 }
@@ -3212,7 +3212,7 @@ input:checked + .toggleSwitchSlider:before {
     font-size: 8px;
     font-weight: 900;
     text-shadow: 0px 0px 20px #949494;
-    margin-left: 12px;
+    margin-left: 13px;
 }
 
 /* Wrapper container for the mojang status bar. */
@@ -3240,10 +3240,10 @@ input:checked + .toggleSwitchSlider:before {
     background-color: rgba(0, 0, 0, 0.75);
     color: #fff;
     border-radius: 4px;
-    padding: 5px 12px;
+    padding: 5px 13px;
     z-index: 1;
     font-family: 'Avenir Medium';
-    font-size: 12px !important;
+    font-size: 13px !important;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
     bottom: calc(100% + 15px);
     transform: translateX(-50%);
@@ -3279,7 +3279,7 @@ input:checked + .toggleSwitchSlider:before {
 #mojangStatusNEContainer {
     display: flex;
     align-items: center;
-    margin: 12px 0px;
+    margin: 13px 0px;
 }
 
 /* White bar which surrounds the non essential service title. */
@@ -3291,7 +3291,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Non essential service title text. */
 #mojangStatusNETitle {
-    font-size: 12px !important;
+    font-size: 13px !important;
     padding: 0px 3px;
     text-align: center;
     letter-spacing: 1px;
@@ -3305,15 +3305,15 @@ input:checked + .toggleSwitchSlider:before {
 /* Displays the name of the mojang service. */
 .mojangStatusName {
     width: 100%;
-    font-size: 12px !important;
+    font-size: 13px !important;
     letter-spacing: 1px;
-    line-height: 12px;
+    line-height: 13px;
     padding: 6px 0px;
 }
 
 /* Displays the status of the mojang service. */
 .mojangStatusIcon {
-    margin-right: 12px;
+    margin-right: 13px;
     font-size: 18.5px;
     color: #848484;
 }
@@ -3566,7 +3566,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Overlay description styles. */
 #overlayDesc {
-    font-size: 12px !important;
+    font-size: 13px !important;
     font-weight: bold;
     -webkit-user-select: initial;
 }
@@ -3592,7 +3592,7 @@ input:checked + .toggleSwitchSlider:before {
 }
 #overlayAcknowledge:hover,
 #overlayAcknowledge:focus {
-    box-shadow: 0px 0px 12px 0px #fff;
+    box-shadow: 0px 0px 13px 0px #fff;
     outline: none;
 }
 #overlayAcknowledge:active {
@@ -3603,7 +3603,7 @@ input:checked + .toggleSwitchSlider:before {
 /* Overlay dismiss option styles. */
 #overlayDismiss {
     font-weight: bold;
-    font-size: 12px !important;
+    font-size: 13px !important;
     text-decoration: none;
     padding-top: 2.5px;
     background: none;
@@ -3669,8 +3669,8 @@ input:checked + .toggleSwitchSlider:before {
 }
 #serverSelectListScrollable::-webkit-scrollbar-thumb,
 #accountSelectListScrollable::-webkit-scrollbar-thumb {
-    border-radius: 12px;
-    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.50);
+    border-radius: 13px;
+    box-shadow: inset 0 0 13px rgba(255, 255, 255, 0.50);
 }
 
 /* Content container for a server listing. */
@@ -3727,7 +3727,7 @@ input:checked + .toggleSwitchSlider:before {
     display: flex;
     height: 100%;
     width: 100%;
-    padding-left: 12px;
+    padding-left: 13px;
 }
 
 /* Add spacing between server listings. */
@@ -3746,7 +3746,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Server listing image. */
 .serverListingImg {
-    margin: 0px 12px 0px 5px;
+    margin: 0px 13px 0px 5px;
     border: 1px solid #fff;
     height: 50px;
     width: 50px;
@@ -3763,14 +3763,14 @@ input:checked + .toggleSwitchSlider:before {
 
 /* The name of the server listing. */
 .serverListingName {
-    font-size: 12px !important;
+    font-size: 13px !important;
     font-weight: bold;
 }
 
 /* Description for the server listing. */
 .serverListingDescription {
-    font-size: 12px !important;
-    line-height: 12px;
+    font-size: 13px !important;
+    line-height: 13px;
     font-weight: bold;
     text-align: left;
 }
@@ -3784,13 +3784,13 @@ input:checked + .toggleSwitchSlider:before {
 
 /* The minecraft version of the server listing. */
 .serverListingVersion {
-    font-size: 12px !important;
+    font-size: 13px !important;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 12px;
-    height: 12px;
+    line-height: 13px;
+    height: 13px;
     border-radius: 2px;
     background: rgba(31, 140, 11, 0.8);
     padding: 0px 2px;
@@ -3799,8 +3799,8 @@ input:checked + .toggleSwitchSlider:before {
 /* The revision version of the server's manifest. */
 .serverListingRevision {
     color: #969696;
-    font-size: 12px !important;
-    line-height: 12px;
+    font-size: 13px !important;
+    line-height: 13px;
     padding: 0px 5px;
 }
 
@@ -3809,7 +3809,7 @@ input:checked + .toggleSwitchSlider:before {
     display: flex;
     align-items: center;
     cursor: pointer;
-    height: 12px;
+    height: 13px;
     position: relative;
 }
 /* Tooltip which displays when hovering over the star. */
@@ -3823,7 +3823,7 @@ input:checked + .toggleSwitchSlider:before {
     position: absolute;
     z-index: 1;
     left: 130%;
-    font-size: 12px !important;
+    font-size: 13px !important;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
 }
 .serverListingStarTooltip::after {
@@ -3870,7 +3870,7 @@ input:checked + .toggleSwitchSlider:before {
 #serverSelectConfirm:focus,
 #accountSelectConfirm:hover,
 #accountSelectConfirm:focus {
-    box-shadow: 0px 0px 12px 0px #fff;
+    box-shadow: 0px 0px 13px 0px #fff;
     outline: none;
 }
 #serverSelectConfirm:active,
@@ -3883,7 +3883,7 @@ input:checked + .toggleSwitchSlider:before {
 #serverSelectCancel,
 #accountSelectCancel {
     font-weight: bold;
-    font-size: 12px !important;
+    font-size: 13px !important;
     text-decoration: none;
     padding-top: 2.5px;
     color: rgba(202, 202, 202, 0.75);
