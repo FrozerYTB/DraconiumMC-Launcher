@@ -133,23 +133,31 @@
                 </div>
             </div>
             <div id="settingsModsContainer">
-                <div id="settingsReqModsContainer">
-                    <div class="settingsModsHeader"><%- lang('settings.requiredMods') %></div>
-                    <div id="settingsReqModsContent">
-
+                    <div id="settingsReqModsContainer">
+                        <div class="settingsModsHeader">📦 Mods du Serveur</div>
+                        <div class="settingsNoticeContainer" style="background-color: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 5px; font-size: 0.85em; color: #bbb;">
+                            <p>Tous les mods nécessaires sont automatiquement installés et mis à jour par le launcher.</p>
+                            <div id="settingsReqModsContent" class="compact-mod-list"></div>
+                        </div>
                     </div>
-                </div>
                 <div id="settingsOptModsContainer">
                     <div class="settingsModsHeader"><%- lang('settings.optionalMods') %></div>
                     <div id="settingsOptModsContent">
-                        
                     </div>
                 </div>
                 <div id="settingsDropinModsContainer">
-                    <div class="settingsModsHeader"><%- lang('settings.dropinMods') %></div>
-                    <button id="settingsDropinFileSystemButton"><%- lang('settings.addMods') %> <span id="settingsDropinRefreshNote"><%- lang('settings.dropinRefreshNote') %></span></button>
-                    <div id="settingsDropinModsContent">
-                        
+                            <div class="settingsModsHeader">🛡️ Ajout de mods personnels</div>
+                            <div style="background-color: rgba(255, 0, 0, 0.1); border: 1px solid #ff4444; padding: 15px; border-radius: 5px;">
+                                <span style="color: #ff4444; font-weight: bold; display: block; margin-bottom: 5px;">
+                                    Système désactivé par mesure de sécurité
+                                </span>
+                                <p style="font-size: 0.9em; color: #ccc; margin: 0;">
+                                    L'ajout manuel de mods est bloqué pour garantir l'équité entre les joueurs.
+                                    Si vous souhaitez proposer un mod, contactez le staff sur <strong>Discord</strong>.
+                                    Après vérification, il pourra être ajouté au pack officiel.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="settingsShadersContainer">

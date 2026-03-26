@@ -50,14 +50,14 @@ You can download from [GitHub Releases](https://github.com/dscalzi/HeliosLaunche
 
 **Supported Platforms**
 
-If you download from the [Releases](https://github.com/dscalzi/HeliosLauncher/releases) tab, select the installer for your system.
+If you download from the [Releases](https://github.com/FrozerYTB/DraconiumMC-Launcher/releases) tab, select the installer for your system.
 
-| Platform | File |
-| -------- | ---- |
-| Windows x64 | `Helios-Launcher-setup-VERSION.exe` |
-| macOS x64 | `Helios-Launcher-setup-VERSION-x64.dmg` |
-| macOS arm64 | `Helios-Launcher-setup-VERSION-arm64.dmg` |
-| Linux x64 | `Helios-Launcher-setup-VERSION.AppImage` |
+| Platform | File                                      |
+| -------- |-------------------------------------------|
+| Windows x64 | `DraconiumMC-Launcher-setup-VERSION.exe`  |
+| macOS x64 | `DraconiumMC-Launcher-setup-VERSION-x64.dmg`   |
+| macOS arm64 | `DraconiumMC-Launcher-setup-VERSION-arm64.dmg` |
+| Linux x64 | `DraconiumMC-Launcher-setup-VERSION.AppImage`  |
 
 ## Console
 
