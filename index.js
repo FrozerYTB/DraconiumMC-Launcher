@@ -86,8 +86,9 @@ ipcMain.on('autoUpdateAction', (event, arg, data) => {
 })
 // Redirect distribution index event from preloader to renderer.
 ipcMain.on('distributionIndexDone', (event, res) => {
-    event.sender.send('distributionIndexDone', res)
-})
+    // On s'assure que 'res' est traité comme un booléen simple
+    event.sender.send('distributionIndexDone', !!res);
+});
 
 // Handle trash item.
 ipcMain.handle(SHELL_OPCODE.TRASH_ITEM, async (event, ...args) => {
@@ -223,7 +224,6 @@ ipcMain.on(MSFT_OPCODE.OPEN_LOGOUT, (ipcEvent, uuid, isLastAccount) => {
 let win
 
 function createWindow() {
-
     win = new BrowserWindow({
         width: 980,
         height: 552,
@@ -232,31 +232,60 @@ function createWindow() {
         webPreferences: {
             preload: path.join(__dirname, 'app', 'assets', 'js', 'preloader.js'),
             nodeIntegration: true,
-            contextIsolation: false
+            contextIsolation: false,
+            webSecurity: false
         },
         backgroundColor: '#171614'
     })
+
     remoteMain.enable(win.webContents)
+    win.webContents.openDevTools()
 
-    const data = {
-        bkid: Math.floor((Math.random() * fs.readdirSync(path.join(__dirname, 'app', 'assets', 'images', 'backgrounds')).length)),
-        lang: (str, placeHolders) => LangLoader.queryEJS(str, placeHolders)
+    // 1. Sécurisation des Backgrounds
+    let backgroundIndex = 0
+    try {
+        const bgPath = path.join(__dirname, 'app', 'assets', 'images', 'backgrounds')
+        if (fs.existsSync(bgPath)) {
+            const files = fs.readdirSync(bgPath).filter(file => {
+                return ['.png', '.jpg', '.jpeg', '.gif'].includes(path.extname(file).toLowerCase())
+            })
+            if (files.length > 0) {
+                backgroundIndex = Math.floor(Math.random() * files.length)
+            }
+        }
+    } catch (err) {
+        console.error("Erreur Backgrounds:", err)
     }
-    Object.entries(data).forEach(([key, val]) => ejse.data(key, val))
 
-    win.loadURL(pathToFileURL(path.join(__dirname, 'app', 'app.ejs')).toString())
+    // 2. Sécurisation de l'injection EJS (Le point critique)
+    try {
+        // Injection du bkid
+        ejse.data('bkid', backgroundIndex)
 
-    /*win.once('ready-to-show', () => {
-        win.show()
-    })*/
+        // Injection de la fonction lang avec une sécurité intégrée
+        ejse.data('lang', (str, placeHolders) => {
+            try {
+                return LangLoader.queryEJS(str, placeHolders)
+            } catch (err) {
+                console.warn(`Clé de langue manquante ou erreur: ${str}`)
+                return str // Retourne la clé brute au lieu de crash
+            }
+        })
+    } catch (err) {
+        console.error("Erreur fatale injection EJS:", err)
+    }
+
+    // 3. Chargement de l'URL
+    const appPath = path.join(__dirname, 'app', 'app.ejs')
+    if (fs.existsSync(appPath)) {
+        win.loadURL(pathToFileURL(appPath).toString())
+    } else {
+        console.error("Fichier app.ejs introuvable à l'adresse:", appPath)
+    }
 
     win.removeMenu()
-
     win.resizable = true
-
-    win.on('closed', () => {
-        win = null
-    })
+    win.on('closed', () => { win = null })
 }
 
 function createMenu() {

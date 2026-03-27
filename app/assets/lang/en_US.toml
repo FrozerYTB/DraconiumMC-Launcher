@@ -7,14 +7,14 @@ serverStatus = "SERVEUR"
 serverStatusPlaceholder = "HORS LIGNE"
 mojangStatus = "STATUT MOJANG"
 mojangStatusTooltipTitle = "Services"
-mojangStatusNETitle = "Non essentiel"
+mojangStatusNETitle = "Non&nbsp;Essentiel"
 newsButton = "ACTUALITÉS"
 launchButton = "JOUER"
-launchButtonPlaceholder = "• Aucun serveur sélectionné"
+launchButtonPlaceholder = "&#8226; Aucun serveur sélectionné"
 launchDetails = "Veuillez patienter.."
 newsNavigationStatus = "{currentPage} sur {totalPages}"
 newsErrorLoadSpan = "Vérification des actualités.."
-newsErrorFailedSpan = "Échec du chargement des actualités"
+newsErrorFailedSpan = "Échec du chargement"
 newsErrorRetryButton = "Réessayer"
 newsErrorNoneSpan = "Aucune actualité"
 
@@ -68,9 +68,9 @@ minecraftTabHeaderText = "Paramètres Minecraft"
 minecraftTabHeaderDesc = "Options liées au lancement du jeu."
 gameResolutionTitle = "Résolution du jeu"
 launchFullscreenTitle = "Lancer en plein écran."
-autoConnectTitle = "Se connecter automatiquement au serveur au lancement."
+autoConnectTitle = "Connexion automatique au lancement."
 launchDetachedTitle = "Lancer le jeu indépendamment du launcher."
-launchDetachedDesc = "Si le jeu n'est pas détaché, fermer le launcher fermera aussi le jeu."
+launchDetachedDesc = "Si activé, fermer le launcher ne fermera pas le jeu."
 tabModsHeaderText = "Paramètres des mods"
 tabModsHeaderDesc = "Activer ou désactiver les mods."
 switchServerButton = "Changer"
@@ -80,14 +80,14 @@ dropinMods = "Mods ajoutés"
 addMods = "Ajouter des mods"
 dropinRefreshNote = "(F5 pour actualiser)"
 shaderpacks = "Shaders"
-shaderpackDesc = "Activer ou désactiver les shaders. Attention, ils nécessitent une machine puissante."
+shaderpackDesc = "Activer ou désactiver les shaders. Nécessite une configuration puissante."
 selectShaderpack = "Choisir un shader"
 tabJavaHeaderText = "Paramètres Java"
 tabJavaHeaderDesc = "Gérer la configuration Java (avancé)."
 memoryTitle = "Mémoire"
 maxRAM = "RAM maximale"
 minRAM = "RAM minimale"
-memoryDesc = "Le minimum recommandé est de 3 Go. Mettre min et max identiques peut réduire les lags."
+memoryDesc = "Minimum recommandé : 3 Go. Mettre min et max identiques peut réduire les lags."
 memoryTotalTitle = "Total"
 memoryAvailableTitle = "Disponible"
 javaExecutableTitle = "Exécutable Java"
@@ -96,15 +96,15 @@ javaExecSelButtonText = "Choisir un fichier"
 javaExecDesc = "Java est vérifié avant le lancement."
 javaPathDesc = "Le chemin doit se terminer par <strong>{pathSuffix}</strong>."
 jvmOptsTitle = "Options JVM supplémentaires"
-jvmOptsDesc = "Options passées à la JVM. <em>-Xms</em> et <em>-Xmx</em> ne doivent pas être inclus."
+jvmOptsDesc = "Options JVM. <em>-Xms</em> et <em>-Xmx</em> ne doivent pas être inclus."
 launcherTabHeaderText = "Paramètres du launcher"
 launcherTabHeaderDesc = "Options liées au launcher."
 allowPrereleaseTitle = "Autoriser les versions préliminaires."
-allowPrereleaseDesc = "Les préversions peuvent contenir des bugs."
+allowPrereleaseDesc = "Les pré-versions peuvent contenir des bugs non testés."
 dataDirectoryTitle = "Dossier de données"
 selectDataDirectory = "Sélectionner le dossier"
 chooseFolder = "Choisir un dossier"
-dataDirectoryDesc = "Tous les fichiers du jeu seront stockés ici."
+dataDirectoryDesc = "Tous les fichiers et installations Java seront stockés ici."
 aboutTabHeaderText = "À propos"
 aboutTabHeaderDesc = "Infos et notes de version."
 aboutTitle = "{appName}"
@@ -115,7 +115,7 @@ support = "Support"
 devToolsConsole = "Console DevTools"
 releaseNotes = "Notes de version"
 changelog = "Changelog"
-noReleaseNotes = "Aucune note de version"
+noReleaseNotes = "Aucune note"
 viewReleaseNotes = "Voir sur GitHub"
 launcherUpdatesHeaderText = "Mises à jour du launcher"
 launcherUpdatesHeaderDesc = "Télécharger et installer les mises à jour."
@@ -129,11 +129,27 @@ waitingText = "En attente de Microsoft.."
 [ejs.welcome]
 continueButton = "CONTINUER"
 
+[js.discord]
+waiting = "En attente du client.."
+state = "Serveur : {shortId}"
+
+[js.index]
+microsoftLoginTitle = "Connexion Microsoft"
+microsoftLogoutTitle = "Déconnexion Microsoft"
+
 [js.login]
 login = "SE CONNECTER"
-loggingIn = "CONNEXION EN COURS"
+loggingIn = "CONNEXION..."
 success = "SUCCÈS"
 tryAgain = "Réessayer"
+
+[js.login.error]
+invalidValue = "* Valeur invalide"
+requiredValue = "* Requis"
+
+[js.login.error.unknown]
+title = "Erreur inconnue lors de la connexion"
+desc = "Une erreur est survenue. Voir la console pour plus de détails."
 
 [js.landing.launch]
 pleaseWait = "Veuillez patienter.."
@@ -155,31 +171,149 @@ players = "JOUEURS"
 
 [js.landing.systemScan]
 checking = "Analyse du système.."
-noCompatibleJava = "Aucune version<br>de Java compatible trouvée"
+noCompatibleJava = "Aucune version de Java compatible"
 installJavaMessage = "Java {major} 64 bits est requis. Voulez-vous l'installer ?"
 installJava = "Installer Java"
 installJavaManually = "Installer manuellement"
-javaDownloadPrepare = "Préparation du téléchargement de Java.."
+javaDownloadPrepare = "Préparation du téléchargement.."
 javaDownloadFailureTitle = "Erreur téléchargement Java"
-javaDownloadFailureText = "Voir la console (CTRL + Shift + i)."
-javaRequired = "Java est requis<br>pour lancer"
+javaDownloadFailureText = "Voir la console pour plus de détails."
+javaRequired = "Java est requis"
+javaRequiredMessage = "Une installation valide de Java {major} x64 est requise."
 javaRequiredDismiss = "J'ai compris"
 javaRequiredCancel = "Retour"
 
 [js.landing.downloadJava]
+findJdkFailure = "Échec de recherche du JDK."
+javaDownloadCorruptedError = "Le fichier téléchargé est corrompu."
 extractingJava = "Extraction de Java"
 javaInstalled = "Java installé !"
 
 [js.landing.dlAsync]
 loadingServerInfo = "Chargement des infos serveur.."
 fatalError = "Erreur fatale"
+unableToLoadDistributionIndex = "Impossible de charger l'index de distribution."
+pleaseWait = "Veuillez patienter.."
+errorDuringLaunchTitle = "Erreur au lancement"
+seeConsoleForDetails = "Voir la console pour plus de détails."
+validatingFileIntegrity = "Vérification des fichiers.."
+errorDuringFileVerificationTitle = "Erreur vérification fichiers"
 downloadingFiles = "Téléchargement des fichiers.."
+errorDuringFileDownloadTitle = "Erreur téléchargement"
 preparingToLaunch = "Préparation du lancement.."
 launchingGame = "Lancement du jeu.."
-doneEnjoyServer = "Terminé. Amuse-toi bien !"
+launchWrapperNotDownloaded = "Échec du téléchargement de LaunchWrapper. Vérifiez votre antivirus."
+doneEnjoyServer = "Terminé. Bon jeu !"
+checkConsoleForDetails = "Vérifiez la console pour plus de détails."
+
+[js.landing.news]
+checking = "Vérification des actualités"
+
+[js.landing.discord]
+loading = "Chargement du jeu.."
+joining = "Connexion au serveur..."
+joined = "En jeu !"
+
+[js.overlay]
+dismiss = "Fermer"
+
+[js.settings.fileSelectors]
+executables = "Exécutables"
+allFiles = "Tous les fichiers"
+
+[js.settings.mstfLogin]
+errorTitle = "Erreur"
+errorMessage = "Échec de l'authentification Microsoft."
+okButton = "OK"
+
+[js.settings.mstfLogout]
+errorTitle = "Erreur"
+errorMessage = "Échec de la déconnexion Microsoft."
+okButton = "OK"
+
+[js.settings.authAccountSelect]
+selectButton = "Choisir"
+selectedButton = "Sélectionné &#10004;"
+
+[js.settings.authAccountLogout]
+lastAccountWarningTitle = "Attention"
+lastAccountWarningMessage = "C'est votre dernier compte. Voulez-vous vraiment vous déconnecter ?"
+confirmButton = "Oui"
+cancelButton = "Annuler"
+
+[js.settings.authAccountPopulate]
+username = "Nom"
+uuid = "UUID"
+selectAccount = "Choisir"
+selectedAccount = "Sélectionné ✓"
+logout = "Déconnexion"
+
+[js.settings.dropinMods]
+removeButton = "Supprimer"
+deleteFailedTitle = "Échec de suppression"
+deleteFailedMessage = "Fichier en cours d'utilisation ?"
+failedToggleTitle = "Échec d'activation"
+okButton = "OK"
+
+[js.settings.serverListing]
+mainServer = "Serveur principal"
+
+[js.settings.java]
+selectedJava = "Sélectionné : Java {version} ({vendor})"
+invalidSelection = "Sélection invalide"
+requiresJava = "Requis : Java {major} x64."
+availableOptions = "Options disponibles pour Java {major}"
+
+[js.settings.about]
+preReleaseTitle = "Pre-release"
+stableReleaseTitle = "Version stable"
+releaseNotesFailed = "Échec du chargement des notes."
 
 [js.settings.updates]
-newReleaseTitle = "Nouvelle version disponible"
+newReleaseTitle = "Nouvelle mise à jour"
+newPreReleaseTitle = "Nouvelle pre-release"
 downloadingButton = "Téléchargement.."
-latestVersionTitle = "Vous utilisez la dernière version"
-checkForUpdatesButton = "Vérifier les mises à jour"
+downloadButton = "Télécharger depuis GitHub"
+latestVersionTitle = "Dernière version installée"
+checkForUpdatesButton = "Vérifier"
+checkingForUpdatesButton = "Vérification.."
+
+[js.settings.msftLogin]
+errorTitle = "Échec Connexion Microsoft"
+errorMessage = "Impossible de s'authentifier."
+okButton = "OK"
+
+[js.uibinder.startup]
+fatalErrorTitle = "Erreur Fatale : Index de distribution"
+fatalErrorMessage = "Impossible de se connecter au serveur."
+closeButton = "Fermer"
+
+[js.uibinder.validateAccount]
+failedMessageTitle = "Échec rafraîchissement login"
+failedMessage = "Impossible de rafraîchir <strong>{account}</strong>."
+failedMessageSelectAnotherAccount = "Erreur de compte. Reconnectez-vous."
+loginButton = "Connexion"
+selectAnotherAccountButton = "Changer de compte"
+
+[js.uicore.autoUpdate]
+checkingForUpdateButton = "Vérification..."
+installNowButton = "Installer maintenant"
+checkForUpdatesButton = "Vérifier"
+
+[js.auth.microsoft.error]
+noProfileTitle = "Profil non configuré"
+noProfileDesc = "Aucun profil Minecraft trouvé sur ce compte Microsoft."
+unknownTitle = "Erreur inconnue"
+unknownDesc = "Voir console."
+
+[js.auth.mojang.error]
+invalidCredentialsTitle = "Identifiants invalides"
+invalidCredentialsDesc = "Email ou mot de passe incorrect."
+tooManyAttemptsTitle = "Trop de tentatives"
+tooManyAttemptsDesc = "Veuillez réessayer plus tard."
+accountGoneTitle = "Compte migré"
+accountGoneDesc = "Ce compte a été migré vers Microsoft."
+unreachableTitle = "Serveurs injoignables"
+unreachableDesc = "Vérifiez votre connexion internet."
+unknownErrorTitle = "Erreur inconnue"
+unknownErrorDesc = "Voir console."

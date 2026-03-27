@@ -44,9 +44,5 @@
     "electron": "^39.2.7",
     "electron-builder": "^26.4.0",
     "eslint": "^9.39.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FrozerYTB/Draconium-Launcher.git"
   }
 }
